@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo claro con efecto suave */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f0f4ff, #d6e2ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #1b1b1b;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Caja principal estilo glass */
+.container {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    max-width: 650px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid rgba(150, 150, 255, 0.35);
+    box-shadow: 0 0 25px rgba(140, 160, 255, 0.25);
+    animation: slide 0.8s ease;
+}
+
+@keyframes slide {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+    color: #2b3b8c;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+label, h3 {
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+}
+
+/* Textareas estilo limpio */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #afbefa;
+    background: #ffffff;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #1b1b1b;
+    resize: vertical;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #6d82ff;
+    box-shadow: 0 0 10px rgba(109, 130, 255, 0.4);
+}
+
+.char-count {
+    text-align: right;
+    color: #6d82ff;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Caja donde se muestran resultados */
+.matriz-display, .resultado-box {
+    background: #ffffff;
+    border: 2px solid #afbefa;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 60px;
+    font-family: "Courier New", monospace;
+    color: #1b1b1b;
+    animation: fadeIn 0.5s ease;
+}
+
+.matriz-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 200px;
+}
+
+.matriz-input input {
+    padding: 12px;
+    border: 2px solid #afbefa;
+    background: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: #1b1b1b;
+    transition: 0.3s;
+}
+
+.matriz-input input:focus {
+    outline: none;
+    border-color: #6d82ff;
+    box-shadow: 0 0 10px rgba(109, 130, 255, 0.4);
+}
+
+/* Botones suaves estilo pastel */
+button {
+    width: 100%;
+    padding: 15px;
+    background: #6d82ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 15px 0;
+}
+
+button:hover {
+    background: #91a4ff;
+    box-shadow: 0 0 15px rgba(109, 130, 255, 0.4);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* Mensaje de error más suave */
+.error {
+    background: #ffd1d8;
+    border-color: #ff6b7e;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #6b0013;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    opacity: 0.7;
+}
